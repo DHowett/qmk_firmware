@@ -17,8 +17,13 @@ bool led_update_kb(led_t usb_led) {
         return true;
 
     writePin(C5, !usb_led.caps_lock);
-    writePin(B7, !usb_led.num_lock);
+    //writePin(B7, !usb_led.num_lock);
     writePin(C6, !usb_led.scroll_lock);
 
     return true;
+}
+
+// QFR TKLs repurpose numlock as WinLock (LED under F9)
+void frosty_winlock_led_set(bool state) {
+    writePin(B7, !state);
 }

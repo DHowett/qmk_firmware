@@ -2,6 +2,8 @@
 
 #include "quantum.h"
 
+void frosty_winlock_led_set(bool on);
+
 // This a shortcut to help you visually see your layout.
 // The following is an example using the Planck MIT layout
 // The first section contains all of the arguements
